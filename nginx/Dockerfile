@@ -1,0 +1,3 @@
+# your code goes here ...
+FROM nginx:alpine
+COPY nginx.conf /etc/nginx/nginx.conf

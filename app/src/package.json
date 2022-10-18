@@ -1,0 +1,15 @@
+{
+  "name": "containerize",
+  "version": "1.0.0",
+  "description": "assesment test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "main": "nodemon -L --inspect=0.0.0.0 index.js"
+  },
+  "devDependencies": {
+      "nodemon": "^2.0.20"
+  },
+  "author": "",
+  "license": "ISC"
+}

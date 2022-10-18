@@ -1,0 +1,26 @@
+version: "3"
+services:
+  app:
+    container_name: containerize_app_1
+    build:
+      context: ./app
+    # ports:
+    #     - 8000:8000
+    volumes:
+      - ./app/src:/usr/src/app:rw
+      - /usr/src/app/node_modules
+
+
+  nginx:
+    container_name: containerize_nginx_1
+    volumes:
+      - ./nginx/files/:/etc/nginx/certs/:ro
+      # - ./nginx/files/localhost.key:/etc/nginx/certs/localhost.key
+    build:
+      context: ./nginx
+    ports:
+        - 8008:80
+        - 443:443
+    restart: always
+    # depends_on:
+    #   - app
