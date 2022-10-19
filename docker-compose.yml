@@ -19,7 +19,7 @@ services:
     build:
       context: ./nginx
     ports:
-        - 8008:80
+        - 80:80
         - 443:443
     restart: always
     # depends_on:
